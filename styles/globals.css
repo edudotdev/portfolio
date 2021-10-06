@@ -1,16 +1,21 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Montserrat, arial;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.radial-circle > div {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
-* {
-  box-sizing: border-box;
+.radial-circle img {
+  width: 100%;
+  height: auto;
+}
+
+.wrapper_index {
+  max-height: 100vh;
+  overflow: hidden;
 }

@@ -1,0 +1,11 @@
+.radial-circle > * {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.radial-circle img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
