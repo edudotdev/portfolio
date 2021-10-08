@@ -11,7 +11,7 @@ const proyects = () => {
 
         <h1>Proyects</h1>
 
-      </Container>
+    </Container>
   );  
 }
 

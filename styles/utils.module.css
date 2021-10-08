@@ -1,4 +1,4 @@
-.radial-circle > * {
+.radial-circle > img:nth-child(1) {
   position: relative;
   width: 100%;
   height: auto;

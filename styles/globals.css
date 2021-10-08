@@ -4,15 +4,42 @@ body {
   font-family: Montserrat, arial;
 }
 
+.radial-circle {
+  height: 695px;
+}
+
 .radial-circle > div {
   position: relative;
   width: 100%;
   height: auto;
+
 }
 
 .radial-circle img {
   width: 100%;
   height: auto;
+}
+
+.radial-circle .person {
+  position: absolute;
+  width: calc(150px + 7vw);
+  height: auto !important;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radial-circle .person::before {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
+  width: 155px;
+  height: 155px;
+  background-color: red;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 250px 400px rgba(201, 133, 255, .75);
 }
 
 .wrapper_index {

@@ -5,7 +5,7 @@ import Image from 'next/Image'
 
 export default function Home() {
   return (
-    <div className="wrapper_index">
+    <div className="wrapper_index ">
 
     
     <Container className="indexx">
@@ -16,14 +16,23 @@ export default function Home() {
       </Head>
   
       <h1 className="text-5xl text-center font-bold py-11">I’m <span className="text-purple-500">Eduardo</span>. I like to develop websites</h1>
-      <div className="radial-circle container mx-auto my-11 relative">
+      <div className="radial-circle container mx-auto mt-11 relative">
         <Image 
           src="/img/RadialCircle.svg"
           height={500}
           width={500}
         />
+        <div class="person">
+          <Image 
+            src="/img/adal.png"
+            height={901}
+            width={551}
+          />
+        </div>
         <Skill 
           skill={'HTML'}
+          top={'12%'}
+          left={'35%'}
         />
       </div>
     </Container>
