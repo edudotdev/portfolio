@@ -3,7 +3,7 @@ import Link from 'next/Link'
 
 const nav = () => {
   return (
-    <header className="container m-auto flex justify-between py-10">
+    <header className="container m-auto flex lg:justify-between justify-around py-10">
       <Image
         src="/img/edurl_logo.svg"
         height={50}

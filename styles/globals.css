@@ -5,14 +5,13 @@ body {
 }
 
 .radial-circle {
-  height: 695px;
+  max-height: calc(100vh - 266px);
 }
 
 .radial-circle > div {
   position: relative;
   width: 100%;
   height: auto;
-
 }
 
 .radial-circle img {
@@ -22,14 +21,14 @@ body {
 
 .radial-circle .person {
   position: absolute;
-  width: calc(150px + 7vw);
+  width: calc(250px + 15vw);
   height: auto !important;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -30px);
 }
 
-.radial-circle .person::before {
+.radial-circle::before {
   content: '';
   position: absolute;
   border-radius: 999px;
@@ -39,7 +38,7 @@ body {
   top: 110%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 250px 400px rgba(201, 133, 255, .75);
+  box-shadow: 0 0 300px 550px rgba(201, 133, 255, .75);
 }
 
 .wrapper_index {

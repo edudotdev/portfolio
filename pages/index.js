@@ -15,8 +15,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
   
-      <h1 className="text-5xl text-center font-bold py-11">I’m <span className="text-purple-500">Eduardo</span>. I like to develop websites</h1>
-      <div className="radial-circle container mx-auto mt-11 relative">
+      <h1 className="lg:text-4xl md:text-3xl text-center font-bold py-11">
+        I’m <span className="text-purple-500">Eduardo</span>. I like to develop websites
+      </h1>
+      <div className="radial-circle container mx-auto h-full mt-11 relative">
         <Image 
           src="/img/RadialCircle.svg"
           height={500}
@@ -24,15 +26,30 @@ export default function Home() {
         />
         <div class="person">
           <Image 
-            src="/img/adal.png"
-            height={901}
-            width={551}
+            src="/img/edumoji.png"
+            height={421}
+            width={421}
           />
         </div>
         <Skill 
           skill={'HTML'}
-          top={'12%'}
-          left={'35%'}
+          bottom={'18%'}
+          left={'calc(6vw + 12%)'}
+        />
+        <Skill 
+          skill={'CSS'}
+          bottom={'22%'}
+          right={'calc(10vw + 16%)'}
+        />
+        <Skill 
+          skill={'JS'}
+          top={'40%'}
+          left={'calc(16vw + 6% + 30px)'}
+        />
+        <Skill 
+          skill={'REACT'}
+          top={'25%'}
+          right={'calc(16vw + 10% + 25px)'}
         />
       </div>
     </Container>
