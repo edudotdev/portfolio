@@ -4,22 +4,31 @@ body {
   font-family: Montserrat, arial;
 }
 
-.radial-circle {
-  max-height: calc(100vh - 266px);
-}
-
-.radial-circle > div {
+/* CONTENIDO DEL INDEX */
+/* .wrapper{
+  min-height: calc(100vh - 266px);
+  background-image: url('../public/img/RadialCircle.svg');
   position: relative;
+  background-size: cover;
   width: 100%;
-  height: auto;
-}
+  height: calc(100vh - 266px);
+} */
 
-.radial-circle img {
-  width: 100%;
-  height: auto;
-}
+/* 
+.wrapper::before {
+  content: '';
+  position: fixed;
+  border-radius: 999px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(201, 133, 255, .75);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 250px 400px rgba(201, 133, 255, .75);
+} */
 
-.radial-circle .person {
+.wrapper .avatar {
   position: absolute;
   width: calc(250px + 15vw);
   height: auto !important;
@@ -28,20 +37,7 @@ body {
   transform: translate(-50%, -30px);
 }
 
-.radial-circle::before {
-  content: '';
-  position: absolute;
-  border-radius: 999px;
-  width: 155px;
-  height: 155px;
-  background-color: red;
-  top: 110%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 300px 550px rgba(201, 133, 255, .75);
-}
-
-.wrapper_index {
+/* .wrapper_index {
   max-height: 100vh;
   overflow: hidden;
-}
+} */

@@ -1,18 +1,18 @@
 import Head from 'next/head'
 import Container from '../components/Container'
 
-const proyects = () => {
+const projects = () => {
   return (
     <Container>
         <Head>
-          <title>Portfolio - Proyects</title>
+          <title>Portfolio - Projects</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <h1>Proyects</h1>
+        <h1>Projects</h1>
 
     </Container>
   );  
 }
 
-export default proyects;
+export default projects;
