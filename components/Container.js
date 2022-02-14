@@ -8,7 +8,6 @@ const Container = ({children}) => {
       <Head>
         <title>NextJS</title>
       </Head>
-      {/* <Navigation /> */}
       <div className="container m-auto">
         {children}
       </div>

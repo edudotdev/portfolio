@@ -1,11 +1,11 @@
 import React from 'react';
 import { PlusCircleIcon } from '@heroicons/react/outline';
 
-const Btnmodal = ({openModal,blendDif}) => {
+const Btnmodal = ({openModal, blendDif, classes}) => {
   return (
-    <button onClick={openModal} className='absolute bottom-0 right-0 m-5 outline-none z-10'>
+    <button onClick={openModal} className='absolute bottom-0 right-0 m-5 outline-none'>
       <PlusCircleIcon 
-        className={`${blendDif ? "mix-blend-difference": 'text-white'}  w-11 h-11`}
+        className={`${classes ? classes :'text-white' } w-11 h-11`}
       />
     </button>
   );

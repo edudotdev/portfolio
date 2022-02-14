@@ -19,7 +19,7 @@ const customStyles = {
   },
 };
 
-const Modal = ({children, blendDif}) => {
+const Modal = ({children, blendDif, classes}) => {
 
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -39,7 +39,7 @@ const Modal = ({children, blendDif}) => {
 
   return (
     <div>
-      <BtnModal blendDif={blendDif} openModal={openModal} />
+      <BtnModal blendDif={blendDif} classes={classes} openModal={openModal} />
       <Modals
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -47,9 +47,9 @@ const Modal = ({children, blendDif}) => {
         contentLabel="Example Modal"
       >
         
-        <button onClick={closeModal} className='rotate-45 absolute top-0 left-0 m-4 outline-none'>
+        <button onClick={closeModal} className='transform rotate-45 absolute top-0 left-0 m-4 outline-none'>
           <PlusCircleIcon
-            className={'text-gray-600  w-10 h-10'}
+            className={'w-10 h-10 opacity-50'}
           />
         </button>
 
