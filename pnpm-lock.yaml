@@ -8,6 +8,7 @@ specifiers:
   react: 17.0.2
   react-dom: 17.0.2
   react-modal: ^3.14.4
+  tailwind-scrollbar-hide: ^1.1.7
   tailwindcss: ^2.2.9
 
 dependencies:
@@ -16,6 +17,7 @@ dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-modal: 3.14.4_react-dom@17.0.2+react@17.0.2
+  tailwind-scrollbar-hide: 1.1.7
   tailwindcss: 2.2.19
 
 devDependencies:
@@ -3150,6 +3152,10 @@ packages:
       string-width: 4.2.3
       strip-ansi: 6.0.1
     dev: true
+
+  /tailwind-scrollbar-hide/1.1.7:
+    resolution: {integrity: sha512-X324n9OtpTmOMqEgDUEA/RgLrNfBF/jwJdctaPZDzB3mppxJk7TLIDmOreEDm1Bq4R9LSPu4Epf8VSdovNU+iA==}
+    dev: false
 
   /tailwindcss/2.2.19:
     resolution: {integrity: sha512-6Ui7JSVtXadtTUo2NtkBBacobzWiQYVjYW0ZnKaP9S1ZCKQ0w7KVNz+YSDI/j7O7KCMHbOkz94ZMQhbT9pOqjw==}

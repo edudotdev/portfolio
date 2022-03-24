@@ -1,11 +1,14 @@
+import React,{useState} from 'react';
 import Head from 'next/head'
 import Container from '../components/Container'
 import Card from '../components/Card'
 import Modal from '../components/Modal'
 import Titlecard from '../components/TitleCard'
+import Github from '../components/Github'
 import Image from 'next/Image'
 
 export default function Home() {
+
   return (
     <Container>
       <Head>
@@ -14,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="container grid mx-auto my-10 px-4 h-full relative grid-cols-12 gap-5 auto-rows-300 md:auto-rows-400 xl:auto-rows-500">
+      <div className="container grid mx-auto my-5 px-4 h-full relative grid-cols-12 gap-5 auto-rows-300 md:auto-rows-400 xl:auto-rows-500">
 
         <Card 
           classes={"flex justify-end items-center xl:items-end xl:flex-row flex-col  col-start-1 col-end-13 bg-purple-100"}>
@@ -46,15 +49,15 @@ export default function Home() {
               />
             </div>
             <Titlecard
-              classes={'text-blue-400 -bottom-16 xl:-bottom-10 2xl:-bottom-0 -left-32 sm:-left-24 lg:-left-32 xl:-left-32 2xl:-left-20 transform scale-50 sm:scale-60 lg:scale-50 xl:scale-75 2xl:scale-100'}  
+              classes={'text-blue-400 -bottom-20 sm:-bottom-16 xl:-bottom-10 2xl:-bottom-0 -left-36 sm:-left-24 lg:-left-32 xl:-left-32 2xl:-left-20 transform scale-40 sm:scale-60 lg:scale-50 xl:scale-75 2xl:scale-100'}  
               title={'About'}
             />
 
           <Modal classes={'text-blue-400'}>
-            2
+            
           </Modal>
-        </Card>
-        
+        </Card>             
+
         <Card 
           classes={"flex justify-end items-end col-start-1 col-end-13 lg:col-start-6 bg-yellow-100"}>
             <div className="h-80 w-80 md:h-96 md:w-96 relative -bottom-8">
@@ -68,7 +71,7 @@ export default function Home() {
             </div>
 
           <Titlecard 
-            classes={'text-yellow-400 -top-20 sm:-top-16 xl:-top-12 2xl:-top-8 -left-40 sm:-left-32 xl:-left-20 2xl:-left-2 transform scale-50 sm:scale-60 lg:scale-6 xl:scale-75 2xl:scale-100'}
+            classes={'text-yellow-400 -top-20 sm:-top-16 xl:-top-12 2xl:-top-8 -left-48 sm:-left-32 xl:-left-20 2xl:-left-2 transform scale-40 sm:scale-60 lg:scale-6 xl:scale-75 2xl:scale-100'}
             title={'Projects'}
             spaceLetter={true}
           />
@@ -97,6 +100,70 @@ export default function Home() {
             4
           </Modal>
         </Card>
+      </div>
+
+      <div className='container grid px-4 mb-5 h-full relative grid-cols-12 gap-5 auto-rows-100 sm:auto-rows-150 md:auto-rows-200'>
+        <a href="https://github.com/EduardinhoRL" target='_blank' className='col-start-1 col-end-13 sm:col-start-1 sm:col-end-5 grid'>
+        <Card
+          classes={'flex justify-center items-center bg-gray-100'} >
+
+          <Github /> 
+          <div className="h-40 w-40 transform scale-40 sm:scale-60 md:scale-75 lg:scale-100 relative">
+              <Image
+                src='/img/github.png'
+                alt=""
+                layout="fill" // required
+                objectFit="cover" // change to suit your needs
+                className="" // just an example
+              />
+            </div>
+
+        </Card>
+        </a>
+
+        <a href="https://twitter.com/edurl_dev" target='_blank' className='col-start-1 col-end-13 sm:col-start-5 sm:col-end-9 grid'>
+        <Card
+          classes={'flex justify-center items-center bg-blue-400'} >
+          
+          <div className=" h-28 w-32 transform scale-40 sm:scale-60 md:scale-75 lg:scale-100 relative">
+            <Image
+              src='/img/tt.webp'
+              alt=""
+              layout="fill" // required
+              objectFit="cover" // change to suit your needs
+              className="" // just an example
+            />
+          </div>
+
+        </Card>
+        </a>
+
+        <a href="https://www.linkedin.com/in/eduardo-guadalupe-robles-ley-9b0807205/" target='_blank' className='col-start-1 col-end-13 sm:col-start-9 sm:col-end-13 grid'>
+        <Card
+          classes={'flex justify-center items-center bg-gray-100'} >
+          
+          <div className="h-32 w-64 block sm:hidden lg:block transform scale-50 md:scale-60 lg:scale-75 xl:scale-100 relative">
+            <Image
+              src='/img/linkedin.png'
+              alt=""
+              layout="fill" // required
+              objectFit="cover" // change to suit your needs
+              className="" // just an example
+            />
+          </div>
+
+          <div className="h-20 w-20 md:h-24 md:w-24 hidden sm:block lg:hidden transform relative">
+            <Image
+              src='/img/in.png'
+              alt=""
+              layout="fill" // required
+              objectFit="cover" // change to suit your needs
+              className="" // just an example
+            />
+          </div>
+
+        </Card>
+        </a>
       </div>
     </Container>
   )

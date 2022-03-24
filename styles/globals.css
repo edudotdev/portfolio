@@ -4,40 +4,41 @@ body {
   font-family: Montserrat, arial;
 }
 
-/* CONTENIDO DEL INDEX */
-/* .wrapper{
-  min-height: calc(100vh - 266px);
-  background-image: url('../public/img/RadialCircle.svg');
-  position: relative;
-  background-size: cover;
-  width: 100%;
-  height: calc(100vh - 266px);
-} */
-
-/* 
-.wrapper::before {
-  content: '';
-  position: fixed;
-  border-radius: 999px;
-  width: 100px;
-  height: 100px;
-  background-color: rgba(201, 133, 255, .75);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 250px 400px rgba(201, 133, 255, .75);
-} */
-
-.wrapper .avatar {
-  position: absolute;
-  width: calc(250px + 15vw);
-  height: auto !important;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -30px);
+@font-face {
+  font-family: Jakarta;
+  src: url(../public/webfonts/PlusJakartaSans-Medium.woff2) format('woff2'),
+    url(../public/webfonts/PlusJakartaSans-Medium.woff) format('woff');
 }
 
-/* .wrapper_index {
-  max-height: 100vh;
-  overflow: hidden;
-} */
+/* background github card*/
+.squares {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: repeat(11, 15px);
+}
+
+.squares {
+  grid-auto-flow: column;
+  grid-auto-columns: 15px;
+}
+
+.squares li {
+  background-color: #ebedf0;
+  border-radius: 4px;
+}
+
+.squares li[data-level="1"] {
+  background-color: #93E7A2;
+}
+
+.squares li[data-level="2"] {
+  background-color: #3EBE5E;
+}
+
+.squares li[data-level="3"] {
+  background-color: #2F984A;
+}
+
+.squares li[data-level="4"] {
+  background-color: #216435;
+}

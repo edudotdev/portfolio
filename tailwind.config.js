@@ -7,6 +7,9 @@ module.exports = {
         '500': '500px',
         '400': '400px',
         '300': '300px',
+        '200': '200px',
+        '150': '150px',
+        '100': '100px',
       },
       boxShadow: {
         'cardInner': 'inset 0 0 0 4px rgba(255,255,255,.5)',
@@ -20,21 +23,34 @@ module.exports = {
       height: {
         '100': '26rem',
         '102': '28rem',
+        '900': '900px',
+        '1000': '1000px',
       },
       width: {
         '100': '26rem',
         '102': '29rem',
       },
-      rotate: {
-        '90g': '-90deg',
-      },
       scale: {
-        '60': '.6',
+        '40': '0.4',
+        '60': '0.6',
+      },
+      fontFamily: {
+        'jakarta': ['Jakarta'],
+      },
+      maxHeight: {
+        'modal': 'calc(100vh )',
+      },
+      extend: {
+        backdropBlur: {
+          xs: '100px',
+        }
       },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+  ],
 }
