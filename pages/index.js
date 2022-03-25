@@ -103,7 +103,7 @@ export default function Home() {
       </div>
 
       <div className='container grid px-4 mb-5 h-full relative grid-cols-12 gap-5 auto-rows-100 sm:auto-rows-150 md:auto-rows-200'>
-        <a href="https://github.com/EduardinhoRL" target='_blank' className='col-start-1 col-end-13 sm:col-start-1 sm:col-end-5 grid'>
+        <a href="https://github.com/EduardinhoRL" target='_blank' rel="noreferrer" className='col-start-1 col-end-13 sm:col-start-1 sm:col-end-5 grid'>
         <Card
           classes={'flex justify-center items-center bg-gray-100'} >
 
@@ -121,7 +121,7 @@ export default function Home() {
         </Card>
         </a>
 
-        <a href="https://twitter.com/edurl_dev" target='_blank' className='col-start-1 col-end-13 sm:col-start-5 sm:col-end-9 grid'>
+        <a href="https://twitter.com/edurl_dev" target='_blank' rel="noreferrer" className='col-start-1 col-end-13 sm:col-start-5 sm:col-end-9 grid'>
         <Card
           classes={'flex justify-center items-center bg-blue-400'} >
           
@@ -138,7 +138,7 @@ export default function Home() {
         </Card>
         </a>
 
-        <a href="https://www.linkedin.com/in/eduardo-guadalupe-robles-ley-9b0807205/" target='_blank' className='col-start-1 col-end-13 sm:col-start-9 sm:col-end-13 grid'>
+        <a href="https://www.linkedin.com/in/eduardo-guadalupe-robles-ley-9b0807205/" target='_blank' rel="noreferrer" className='col-start-1 col-end-13 sm:col-start-9 sm:col-end-13 grid'>
         <Card
           classes={'flex justify-center items-center bg-gray-100'} >
           
