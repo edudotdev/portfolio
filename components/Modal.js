@@ -21,31 +21,30 @@ const customStyles = {
   },
 };
 
-const Modal = ({children, classes}) => {
+const Modal = ({children, btnColor}) => {
 
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
+    document.body.classList.add('overflow-y-hidden');
     setIsOpen(true);
   }
 
   function closeModal() {
+    document.body.classList.remove('overflow-y-hidden');
     setIsOpen(false);
   }
 
   return (
     <>
-      <BtnModal classes={classes} openModal={openModal} />
-      <Modals
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        
-        
+      <BtnModal btnColor={btnColor} openModal={openModal} />
 
-       {/* <hr className='my-20 mx-5'></hr> */}
+        <Modals
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
 
         <div className='overflow-y-scroll max-h-modal scrollbar-hide'>
 
@@ -64,14 +63,14 @@ const Modal = ({children, classes}) => {
               <p className='text-4xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perferendis corrupti reprehenderit facilis architecto cum, accusamus dignissimos placeat dolorum voluptate! Libero exercitationem quibusdam porro facere voluptatibus reiciendis deleniti consequatur qui?</p>
             </div>
           </div>
-          {/* Card About */}
+          {/* Card Projects */}
           <div className='bg-yellow-200 bg-opacity-70 p-5 h-900'>
             <div className='container mx-auto px-4'>
               <h1 className='text-20xl font-bold text-yellow-400'>Projects</h1>
               <p className='text-4xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perferendis corrupti reprehenderit facilis architecto cum, accusamus dignissimos placeat dolorum voluptate! Libero exercitationem quibusdam porro facere voluptatibus reiciendis deleniti consequatur qui?</p>
             </div>
           </div>
-
+          {/* Card Skills */}
           <div className='bg-green-200 bg-opacity-70 p-5 h-900'>
             <div className='container mx-auto px-4'>
               <h1 className='text-20xl font-bold text-green-400'>Skills</h1>
@@ -79,6 +78,7 @@ const Modal = ({children, classes}) => {
             </div>
           </div>
         </div>
+
       </Modals>
     </>
   );

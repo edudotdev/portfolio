@@ -5,7 +5,7 @@ import Card from '../components/Card'
 import Modal from '../components/Modal'
 import Titlecard from '../components/TitleCard'
 import Github from '../components/Github'
-import Image from 'next/Image'
+import Imagecard from '../components/ImageCard';
 
 export default function Home() {
 
@@ -25,80 +25,50 @@ export default function Home() {
           <h1 className="2xl:text-6xl lg:text-5xl md:text-3xl text-2xl text-center font-bold pt-5 lg:pt-10 self-center opacity-80">
             I’m <span className="text-purple-500">Eduardo</span>. I like to develop websites
           </h1>
-          <div className="h-60 w-60 md:h-72 md:w-72 xl:h-96 xl:w-96 relative -bottom-1">
-            <Image
-              src='/img/edumoji.png'
-              alt=""
-              layout="fill" // required
-              objectFit="cover" // change to suit your needs
-              className="" // just an example
-            />
-          </div>
+
+          <Imagecard classes='h-60 w-60 md:h-72 md:w-72 xl:h-96 xl:w-96 relative -bottom-1' imgSrc='/img/edumoji.png' />
+
         </Card>
 
         <Card 
           classes={"flex justify-end items-end bg-blue-100 col-start-1 col-end-13 lg:col-end-6"}>
 
-            <div className="h-80 w-80 md:h-100 md:w-100 relative -bottom-1">
-              <Image
-                src='/img/eduabout.png'
-                alt=""
-                layout="fill" // required
-                objectFit="cover" // change to suit your needs
-                className="" // just an example
-              />
-            </div>
-            <Titlecard
-              classes={'text-blue-400 -bottom-20 sm:-bottom-16 xl:-bottom-10 2xl:-bottom-0 -left-36 sm:-left-24 lg:-left-32 xl:-left-32 2xl:-left-20 transform scale-40 sm:scale-60 lg:scale-50 xl:scale-75 2xl:scale-100'}  
-              title={'About'}
-            />
+          <Imagecard classes='h-80 w-80 md:h-100 md:w-100 relative -bottom-1' imgSrc='/img/eduabout.png' />
 
-          <Modal classes={'text-blue-400'}>
+          <Titlecard
+            classes={'text-blue-400 -bottom-20 sm:-bottom-16 xl:-bottom-10 2xl:-bottom-0 -left-36 sm:-left-24 lg:-left-32 xl:-left-32 2xl:-left-20 transform scale-40 sm:scale-60 lg:scale-50 xl:scale-75 2xl:scale-100'}  
+            title={'About'}
+          />
+
+          <Modal btnColor='blue' />
             
-          </Modal>
         </Card>             
 
-        <Card 
-          classes={"flex justify-end items-end col-start-1 col-end-13 lg:col-start-6 bg-yellow-100"}>
-            <div className="h-80 w-80 md:h-96 md:w-96 relative -bottom-8">
-              <Image
-                src='/img/eduprojects.png'
-                alt=""
-                layout="fill" // required
-                objectFit="cover" // change to suit your needs
-                className="" // just an example
-              />
-            </div>
+        <Card classes={"flex justify-end items-end col-start-1 col-end-13 lg:col-start-6 bg-yellow-100"}>
+
+        <Imagecard classes='h-72 w-72 md:h-96 md:w-96 relative -bottom-8' imgSrc='/img/eduprojects.png' />
 
           <Titlecard 
             classes={'text-yellow-400 -top-20 sm:-top-16 xl:-top-12 2xl:-top-8 -left-48 sm:-left-32 xl:-left-20 2xl:-left-2 transform scale-40 sm:scale-60 lg:scale-6 xl:scale-75 2xl:scale-100'}
             title={'Projects'}
             spaceLetter={true}
           />
-          <Modal classes={'text-yellow-400'}>
-            3
-          </Modal>
+
+          <Modal btnColor='yellow' />
+
         </Card>
 
-        <Card 
-          classes={'col-start-1 col-end-13 bg-green-100 flex justify-center items-center'}>
+        <Card classes={'col-start-1 col-end-13 bg-green-100 flex justify-center items-center'}>
 
-          <div className="h-102 w-102 relative -bottom-16">
-            <Image
-              src='/img/eduskills.png'
-              alt=""
-              layout="fill" // required
-              objectFit="cover" // change to suit your needs
-              className="" // just an example
-            />
-          </div>
+          <Imagecard classes='h-102 w-102 relative -bottom-16' imgSrc='/img/eduskills.png' />
+
           <Titlecard 
             classes={'text-green-400 top-22 -left-36 sm:-left-36 md:-left-32 xl:top-22 xl:-left-20 transform rotate-90 scale-60 md:scale-75 xl:scale-100'}
             title={'Skills'}
           />
-          <Modal classes={'text-green-400'}>
-            4
-          </Modal>
+
+          <Modal btnColor='green' />
+
         </Card>
       </div>
 
@@ -108,15 +78,8 @@ export default function Home() {
           classes={'flex justify-center items-center bg-gray-100'} >
 
           <Github /> 
-          <div className="h-40 w-40 transform scale-40 sm:scale-60 md:scale-75 lg:scale-100 relative">
-              <Image
-                src='/img/github.png'
-                alt=""
-                layout="fill" // required
-                objectFit="cover" // change to suit your needs
-                className="" // just an example
-              />
-            </div>
+
+          <Imagecard classes='h-40 w-40 transform scale-40 sm:scale-60 md:scale-75 lg:scale-100 relative' imgSrc='/img/github.png' />
 
         </Card>
         </a>
@@ -124,16 +87,8 @@ export default function Home() {
         <a href="https://twitter.com/edurl_dev" target='_blank' rel="noreferrer" className='col-start-1 col-end-13 sm:col-start-5 sm:col-end-9 grid'>
         <Card
           classes={'flex justify-center items-center bg-blue-400'} >
-          
-          <div className=" h-28 w-32 transform scale-40 sm:scale-60 md:scale-75 lg:scale-100 relative">
-            <Image
-              src='/img/tt.webp'
-              alt=""
-              layout="fill" // required
-              objectFit="cover" // change to suit your needs
-              className="" // just an example
-            />
-          </div>
+
+        <Imagecard classes='h-28 w-32 transform scale-40 sm:scale-60 md:scale-75 lg:scale-100 relative' imgSrc='/img/tt.webp' />
 
         </Card>
         </a>
@@ -142,28 +97,13 @@ export default function Home() {
         <Card
           classes={'flex justify-center items-center bg-gray-100'} >
           
-          <div className="h-32 w-64 block sm:hidden lg:block transform scale-50 md:scale-60 lg:scale-75 xl:scale-100 relative">
-            <Image
-              src='/img/linkedin.png'
-              alt=""
-              layout="fill" // required
-              objectFit="cover" // change to suit your needs
-              className="" // just an example
-            />
-          </div>
+          <Imagecard classes='h-32 w-64 block sm:hidden lg:block transform scale-50 md:scale-60 lg:scale-75 xl:scale-100 relative' imgSrc='/img/linkedin.png' />
 
-          <div className="h-20 w-20 md:h-24 md:w-24 hidden sm:block lg:hidden transform relative">
-            <Image
-              src='/img/in.png'
-              alt=""
-              layout="fill" // required
-              objectFit="cover" // change to suit your needs
-              className="" // just an example
-            />
-          </div>
+          <Imagecard classes='h-20 w-20 md:h-24 md:w-24 hidden sm:block lg:hidden transform relative' imgSrc='/img/in.png' />
 
         </Card>
         </a>
+
       </div>
     </Container>
   )
