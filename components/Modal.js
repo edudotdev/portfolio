@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import Modals from 'react-modal';
 import BtnModal from './BtnModal';
 
+import Link from 'next/link'
+
 const customStyles = {
   content: {
     width: '100%',
@@ -18,10 +20,11 @@ const customStyles = {
     transition: 'backdrop-filter 4s ease',
     backdropFilter: 'saturate(180%) blur(40px)',
     padding: '0',
+    scrollBehavior: 'smooth',
   },
 };
 
-const Modal = ({children, btnColor}) => {
+const Modal = ({children, color}) => {
 
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -37,7 +40,7 @@ const Modal = ({children, btnColor}) => {
 
   return (
     <>
-      <BtnModal btnColor={btnColor} openModal={openModal} />
+      <BtnModal color={color} openModal={openModal} />
 
         <Modals
           isOpen={modalIsOpen}
@@ -47,7 +50,6 @@ const Modal = ({children, btnColor}) => {
         >
 
         <div className='overflow-y-scroll max-h-modal scrollbar-hide'>
-
           <div className='h-12 bg-white bg-opacity-10'>
             <button onClick={closeModal} className='transform rotate-45 absolute top-0 left-0 m-2 outline-none text-white mix-blend-difference'>
               <PlusCircleIcon
@@ -57,26 +59,29 @@ const Modal = ({children, btnColor}) => {
           </div>
 
           {/* Card About */}
-          <div className='bg-blue-200 bg-opacity-70 p-5'>
+          <section id='about' className='bg-blue-200 bg-opacity-70 min-h-screen'>
             <div className='container mx-auto px-4'>
+            <Link href="#skill">
+              <a>Home</a>
+            </Link>
               <h1 className='text-20xl font-bold text-blue-400'>About</h1>
               <p className='text-4xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perferendis corrupti reprehenderit facilis architecto cum, accusamus dignissimos placeat dolorum voluptate! Libero exercitationem quibusdam porro facere voluptatibus reiciendis deleniti consequatur qui?</p>
             </div>
-          </div>
+          </section>
           {/* Card Projects */}
-          <div className='bg-yellow-200 bg-opacity-70 p-5 h-900'>
+          <section id='projects' className='bg-yellow-200 bg-opacity-70 p-5 min-h-screen'>
             <div className='container mx-auto px-4'>
               <h1 className='text-20xl font-bold text-yellow-400'>Projects</h1>
               <p className='text-4xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perferendis corrupti reprehenderit facilis architecto cum, accusamus dignissimos placeat dolorum voluptate! Libero exercitationem quibusdam porro facere voluptatibus reiciendis deleniti consequatur qui?</p>
             </div>
-          </div>
+          </section>
           {/* Card Skills */}
-          <div className='bg-green-200 bg-opacity-70 p-5 h-900'>
+          <section id='skill' className='bg-green-200 bg-opacity-70 p-5 min-h-screen'>
             <div className='container mx-auto px-4'>
               <h1 className='text-20xl font-bold text-green-400'>Skills</h1>
               <p className='text-4xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perferendis corrupti reprehenderit facilis architecto cum, accusamus dignissimos placeat dolorum voluptate! Libero exercitationem quibusdam porro facere voluptatibus reiciendis deleniti consequatur qui?</p>
             </div>
-          </div>
+          </section>
         </div>
 
       </Modals>

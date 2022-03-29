@@ -30,8 +30,7 @@ export default function Home() {
 
         </Card>
 
-        <Card 
-          classes={"flex justify-end items-end bg-blue-100 col-start-1 col-end-13 lg:col-end-6"}>
+        <Card isModal color='blue' classes={"flex justify-end items-end bg-blue-100 col-start-1 col-end-13 lg:col-end-6"}>
 
           <Imagecard classes='h-80 w-80 md:h-100 md:w-100 relative -bottom-1' imgSrc='/img/eduabout.png' />
 
@@ -40,11 +39,9 @@ export default function Home() {
             title={'About'}
           />
 
-          <Modal btnColor='blue' />
-            
         </Card>             
 
-        <Card classes={"flex justify-end items-end col-start-1 col-end-13 lg:col-start-6 bg-yellow-100"}>
+        <Card isModal color='yellow' classes={"flex justify-end items-end col-start-1 col-end-13 lg:col-start-6 bg-yellow-100"}>
 
         <Imagecard classes='h-72 w-72 md:h-96 md:w-96 relative -bottom-8' imgSrc='/img/eduprojects.png' />
 
@@ -54,11 +51,9 @@ export default function Home() {
             spaceLetter={true}
           />
 
-          <Modal btnColor='yellow' />
-
         </Card>
 
-        <Card classes={'col-start-1 col-end-13 bg-green-100 flex justify-center items-center'}>
+        <Card isModal color='green' classes={'col-start-1 col-end-13 bg-green-100 flex justify-center items-center'}>
 
           <Imagecard classes='h-102 w-102 relative -bottom-16' imgSrc='/img/eduskills.png' />
 
@@ -66,8 +61,6 @@ export default function Home() {
             classes={'text-green-400 top-22 -left-36 sm:-left-36 md:-left-32 xl:top-22 xl:-left-20 transform rotate-90 scale-60 md:scale-75 xl:scale-100'}
             title={'Skills'}
           />
-
-          <Modal btnColor='green' />
 
         </Card>
       </div>

@@ -4,6 +4,10 @@ body {
   font-family: Montserrat, arial;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: Jakarta;
   src: url(../public/webfonts/PlusJakartaSans-Medium.woff2) format('woff2'),
