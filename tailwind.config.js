@@ -21,6 +21,7 @@ module.exports = {
         '2rem': '2rem',
       },
       fontSize: {
+        '10xl': '10rem',
         '20xl': '20rem',
       },
       height: {

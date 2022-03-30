@@ -20,10 +20,10 @@ export default function Home() {
       <div className="container grid mx-auto my-5 px-4 h-full relative grid-cols-12 gap-5 auto-rows-300 md:auto-rows-400 xl:auto-rows-500">
 
         <Card 
-          classes={"flex justify-end items-center xl:items-end xl:flex-row flex-col  col-start-1 col-end-13 bg-purple-100"}>
+          classes={"flex justify-end items-center xl:items-end xl:flex-row flex-col col-start-1 col-end-13 bg-violet-100"}>
 
-          <h1 className="2xl:text-6xl lg:text-5xl md:text-3xl text-2xl text-center font-bold pt-5 lg:pt-10 self-center opacity-80">
-            I’m <span className="text-purple-500">Eduardo</span>. I like to develop websites
+          <h1 className="2xl:text-6xl lg:text-5xl md:text-3xl text-2xl text-center font-bold pt-5 lg:pt-10 self-center">
+            I’m <span className="text-violet-400">Eduardo</span>. I like to develop websites
           </h1>
 
           <Imagecard classes='h-60 w-60 md:h-72 md:w-72 xl:h-96 xl:w-96 relative -bottom-1' imgSrc='/img/edumoji.png' />
@@ -66,7 +66,7 @@ export default function Home() {
       </div>
 
       <div className='container grid px-4 mb-5 h-full relative grid-cols-12 gap-5 auto-rows-100 sm:auto-rows-150 md:auto-rows-200'>
-        <a href="https://github.com/EduardinhoRL" target='_blank' rel="noreferrer" className='col-start-1 col-end-13 sm:col-start-1 sm:col-end-5 grid'>
+        <a href="https://github.com/edudotdev" target='_blank' rel="noreferrer" className='col-start-1 col-end-13 sm:col-start-1 sm:col-end-5 grid'>
         <Card
           classes={'flex justify-center items-center bg-gray-100'} >
 
